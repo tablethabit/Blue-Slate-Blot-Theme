@@ -1,0 +1,31 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{> title}}</title>
+    <meta name="description" content="{{> description}}">
+    
+    <!-- Begin proprietary meta tags for sharing on social media -->
+    <meta property="og:title" content="{{> title}}">
+    <meta property="og:description" content="{{> description}}">
+    <meta property="og:type" content="website">
+    {{#entry}}
+    {{#thumbnail.large}}
+    <meta property="og:image" content="{{{url}}}">
+    <meta name="twitter:card" content="summary_large_image">
+    {{/thumbnail.large}}
+    <meta property="og:url" content="{{{absoluteURL}}}">
+    {{/entry}}
+    <!-- End proprietary meta tags for sharing on social media -->
+
+    <link rel="alternate" type="application/rss+xml" title="{{title}}" href="{{{blogURL}}}{{{feedURL}}}">
+    {{#avatar}}<link rel="icon" href="/Files/_favicon.jpg" type="image/x-icon">{{/avatar}}
+    <link rel="shortcut icon" type="image/jpg" href="/Files/_favicon.jpg"/>
+    <link rel="apple-touch-icon" href="/Files/_favicon.jpg">
+    <link rel="stylesheet" href="{{{cssURL}}}">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Edu+SA+Beginner:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+	</head>
